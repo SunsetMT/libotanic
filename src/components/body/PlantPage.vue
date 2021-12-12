@@ -48,6 +48,14 @@
     </div>
 
 
+    <div class="plant-extra-photos">
+      <div class="plant-extra-photos-text">Фотографии деталей</div>
+      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict1" alt="" class="plant-page-plant-extra-pic1">
+      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict2" alt="" class="plant-page-plant-extra-pic2">
+    </div>
+
+
+
     <ToMenuButton/>
 
     <div class="plant-page-end-block"></div>
@@ -70,21 +78,26 @@ export default {
   props: {
     plant_data: {
       type: Object,
-      default: () => {
-      }
+      default:
+          () => {
+          }
     }
-  },
-  computed: {
-    ...mapGetters([
-      'PLANTS'
-    ])
   }
+  ,
+  computed: {
+    ...
+        mapGetters([
+          'PLANTS'
+        ]),
+  }
+
 }
 </script>
 
 <style lang="sass">
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap')
+
 
 .plant-page-wrapper
   margin-top: 75px
@@ -93,7 +106,7 @@ export default {
 .plant-page-plant-pic
   width: 250px
   height: 305px
-  margin: 12px 0 0 0
+  margin: 12px auto 0 auto
 
 .plant-page-header-rus-name
   font-size: 32px
@@ -140,6 +153,33 @@ export default {
       font-family: Raleway, serif
       font-weight: 500
       font-size: 20px
+
+.plant-extra-photos
+  width: 325px
+  height: 570px
+  font-family: Raleway, serif
+  font-size: 22px
+  font-weight: 600
+  background-color: #EADFC9
+  border-radius: 10px
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
+  margin: 20px auto 20px auto
+
+  .plant-extra-photos-text
+    padding: 15px
+
+  .plant-page-plant-extra-pic1
+    border-radius: 10px
+    width: 300px
+    height: 231px
+    margin: 0 auto 26px auto
+
+  .plant-page-plant-extra-pic2
+    width: 300px
+    height: 231px
+    border-radius: 10px
+    margin: 0 auto 0 auto
+
 
 .plant-page-end-block
   height: 200px

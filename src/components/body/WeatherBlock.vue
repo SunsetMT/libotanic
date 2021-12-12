@@ -1,6 +1,6 @@
 <template>
   <div class="weather-wrapper">
-    <div class="weather-inf">Region: {{weather.location.region}}</div>
+    <div class="weather-inf bg-blue-500">Region: {{weather.location.region}}</div>
     <div class="weather-inf">Localtime: {{weather.location.localtime}}</div>
     <div class="weather-inf">Temp_C: {{weather.current.temp_c}}</div>
     <div class="weather-inf">Temp_F: {{weather.current.temp_f}}</div>

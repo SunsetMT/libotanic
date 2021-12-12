@@ -1,9 +1,9 @@
 <template>
   <transition>
-  <button class="to-menu-button" @click="redirect('/#/otdels')">
-    <img src="../../assets/jpg/back-arrow.svg" alt="">
-    Вернуться в меню
-  </button>
+    <button class="to-menu-button" @click="redirect('/#/otdels')">
+      <img src="../../assets/jpg/back-arrow.svg" alt="" class="back-arrow">
+      Вернуться в меню
+    </button>
   </transition>
 </template>
 
@@ -32,10 +32,15 @@ export default {
   background-color: #EADFC9
   border-radius: 10px
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
+  margin: auto
+  display: flex
+  justify-content: center
+  align-items: center
 
 .back-arrow
   width: 16px
   height: 16px
+  margin-right: 15px
 
 button
   transition: all 0.35s ease-out
