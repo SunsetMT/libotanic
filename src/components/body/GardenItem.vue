@@ -1,15 +1,44 @@
 <template>
-
-  <a href="#/otdels" class="garden-item-wrapper">
+  <div class="garden-item-wrapper-box">
+    <a href="#/otdels" class="garden-item-wrapper">
       <span class="garden-title">
         Ботанический сад Петра Великого
       </span>
-  </a>
+    </a>
+
+    <WeatherBlock/>
+  </div>
 </template>
 
 <script>
+import WeatherBlock from "@/components/body/WeatherBlock";
 export default {
   name: "GardenItem",
+  components: {
+    WeatherBlock
+  },
+  data: function () {
+    return {
+      weather: null,
+      options: {
+        method: 'GET',
+        url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+        params: {q: 'Saint-Peterburg'},
+        headers: {
+          'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+          'x-rapidapi-key': '28378676e0mshb011eb4a5272f7ep1f8eddjsnc6cc2ac86ca8'
+        }
+      }
+    }
+  },
+
+  mounted() {
+    require("axios").default.request(this.options)
+        .then(response => (this.weather = response.data))
+        .catch(function (error) {
+          console.error(error);
+        })
+  }
 }
 </script>
 
