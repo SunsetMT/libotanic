@@ -64,6 +64,8 @@ export default {
   justify-content: flex-end
   .otdels-header-title
     width: 104px
+    display: flex
+    align-items: center
     font-family: Raleway, serif
     font-size: 24px
     font-weight: 600
@@ -75,7 +77,7 @@ export default {
 
   .search-link
     margin-left: 70px
-    margin-right: 31px
+    margin-right: 21px
     width: 23px
     height: 23px
     background-image: url("../../assets/jpg/search-icon.svg")
