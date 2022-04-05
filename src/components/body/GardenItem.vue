@@ -6,16 +6,13 @@
       </span>
     </a>
 
-    <WeatherBlock/>
   </div>
 </template>
 
 <script>
-import WeatherBlock from "@/components/body/WeatherBlock";
 export default {
   name: "GardenItem",
   components: {
-    WeatherBlock
   },
   data: function () {
     return {

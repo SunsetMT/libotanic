@@ -75,22 +75,23 @@ export default {
     CommonFooter,
     ToMenuButton
   },
+  data: function () {
+    return {
+      imageData: " "
+    }
+  },
   props: {
     plant_data: {
       type: Object,
-      default:
-          () => {
-          }
+      default: () => {}
     }
-  }
-  ,
+  },
   computed: {
     ...
         mapGetters([
           'PLANTS'
         ]),
   }
-
 }
 </script>
 

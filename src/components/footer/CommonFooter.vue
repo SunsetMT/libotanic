@@ -1,7 +1,7 @@
 <template>
   <div class="common-footer-wrapper">
     <span class="common-footer-text">
-      Libotanics 2021
+      Libotanics 2022
     </span>
   </div>
 </template>
