@@ -32,7 +32,6 @@ export default {
 @media screen and (min-width: 376px)
   .page-wrapper
     height: 823px
-    width: 98vw
     margin: auto
 
 </style>

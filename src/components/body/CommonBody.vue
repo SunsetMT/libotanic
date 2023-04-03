@@ -27,7 +27,7 @@ export default {
 @media screen and (min-width: 376px)
   .body-wrapper
     min-height: 749px
-    width: 98vw
+    width: 100%
     position: absolute
     top: 85px
     background-color: #F6EEDD

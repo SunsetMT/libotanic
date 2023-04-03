@@ -1,9 +1,11 @@
 <template>
   <transition>
-    <button class="to-menu-button" @click="redirect('#/otdels')">
-      <img src="../../assets/jpg/back-arrow.svg" alt="" class="back-arrow">
-      Вернуться в меню
-    </button>
+    <div class="to-menu-button-wrapper">
+      <button class="to-menu-button" @click="redirect('#/otdels')">
+        <img src="../../assets/jpg/back-arrow.svg" alt="" class="back-arrow">
+        Вернуться в меню
+      </button>
+    </div>
   </transition>
 </template>
 
@@ -11,7 +13,7 @@
 export default {
   name: "ToMenuButton",
   methods: {
-    redirect(link){
+    redirect(link) {
       window.location = link
     }
   }
@@ -22,8 +24,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap')
 
 .to-menu-button
-  position: relative
-  top: 50px
+  margin: 20px auto 0 auto
   width: 250px
   height: 50px
   font-family: Raleway, serif
@@ -32,7 +33,6 @@ export default {
   background-color: #EADFC9
   border-radius: 10px
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
-  margin: auto
   display: flex
   justify-content: center
   align-items: center

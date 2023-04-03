@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="garden-item-wrapper-box">
     <a href="#/otdels" class="garden-item-wrapper">
@@ -30,6 +32,7 @@ export default {
   },
 
   mounted() {
+    // eslint-disable-next-line
     require("axios").default.request(this.options)
         .then(response => (this.weather = response.data))
         .catch(function (error) {
