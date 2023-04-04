@@ -1,5 +1,5 @@
 <template>
-  <div class="otdels-wrapper">
+  <div class="otdels-wrapper" v-cloak>
 
     <div class="otdels-header">
 
@@ -18,20 +18,18 @@
                :key="otdel.name"
                :otdel_data="otdel"/>
 
-    <CommonFooter/>
   </div>
 </template>
 
 <script>
 import OtdelItem from "@/components/body/OtdelItem";
-import CommonFooter from "@/components/footer/CommonFooter";
 import {mapGetters} from 'vuex'
 
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "Otdels",
   components: {
-    OtdelItem,
-    CommonFooter
+    OtdelItem
   },
   computed: {
     ...mapGetters([
@@ -46,9 +44,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap')
 
 
-.otdels-wrapper
-  margin-top: 17px
+[v-cloak]
+  display: none
 
+
+.otdels-wrapper
 
   .otdels-header
     margin-bottom: 20px

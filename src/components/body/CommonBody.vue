@@ -16,9 +16,9 @@ export default {
 
 @media screen and (max-width: 375px)
   .body-wrapper
-    min-height: 749px
+    margin-top: -40px
+    min-height: 800px
     width: 375px
-    position: absolute
     top: 85px
     background-color: #F6EEDD
     border-top-right-radius: 50px
@@ -26,9 +26,9 @@ export default {
 
 @media screen and (min-width: 376px)
   .body-wrapper
-    min-height: 749px
-    width: 98vw
-    position: absolute
+    margin-top: -40px
+    min-height: 800px
+    width: 100%
     top: 85px
     background-color: #F6EEDD
     border-top-right-radius: 50px

@@ -1,5 +1,5 @@
 <template>
-  <div class="plant-page-wrapper">
+  <div class="plant-page-wrapper" v-cloak>
     <div class="plant-page-header">
       <div class="plant-page-header-rus-name">
         {{ PLANTS.find(p => p.id === Number($route.params.id)).rus_name }}
@@ -10,7 +10,7 @@
     </div>
 
     <div class="plant-page-body">
-      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict" alt="" class="plant-page-plant-pic">
+      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict" alt="" class="plant-page-plant-pic" v-cloak>
     </div>
 
     <div class="plant-description">
@@ -50,8 +50,8 @@
 
     <div class="plant-extra-photos">
       <div class="plant-extra-photos-text">Фотографии деталей</div>
-      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict1" alt="" class="plant-page-plant-extra-pic1">
-      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict2" alt="" class="plant-page-plant-extra-pic2">
+      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict1" alt="" class="plant-page-plant-extra-pic1" v-cloak>
+      <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict2" alt="" class="plant-page-plant-extra-pic2" v-cloak>
     </div>
 
 
@@ -60,24 +60,22 @@
 
     <div class="plant-page-end-block"></div>
 
-    <CommonFooter/>
   </div>
 </template>
 
 <script>
-import CommonFooter from "@/components/footer/CommonFooter";
 import ToMenuButton from "@/components/body/ToMenuButton";
 import {mapGetters} from 'vuex'
 
 export default {
   name: "PlantPage",
   components: {
-    CommonFooter,
     ToMenuButton
   },
   data: function () {
     return {
-      imageData: " "
+      imageData: '',
+      pending: true,
     }
   },
   props: {
@@ -87,21 +85,40 @@ export default {
     }
   },
   computed: {
-    ...
-        mapGetters([
+    ...mapGetters([
           'PLANTS'
         ]),
+  },
+
+  created() {
+
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.pending = false
+    }, 1000)
   }
+
+
 }
 </script>
 
 <style lang="sass">
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap')
 
 
+[v-cloak]
+  display: none
+
+
 .plant-page-wrapper
-  margin-top: 75px
+  .loading
+    width: 250px
+    height: 305px
 
 
 .plant-page-plant-pic

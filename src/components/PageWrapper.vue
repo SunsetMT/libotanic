@@ -2,17 +2,20 @@
   <div class="page-wrapper">
     <CommonHeader/>
     <CommonBody/>
+    <CommonFooter/>
   </div>
 </template>
 
 <script>
 import CommonHeader from "@/components/header/CommonHeader";
 import CommonBody from "@/components/body/CommonBody";
+import CommonFooter from "@/components/footer/CommonFooter";
 //import CommonFooter from "@/components/footer/CommonFooter";
 
 export default {
   name: "PageWrapper",
   components: {
+    CommonFooter,
     CommonHeader,
     CommonBody,
     //CommonFooter
@@ -32,7 +35,6 @@ export default {
 @media screen and (min-width: 376px)
   .page-wrapper
     height: 823px
-    width: 98vw
     margin: auto
 
 </style>
