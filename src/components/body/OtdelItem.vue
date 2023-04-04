@@ -62,7 +62,7 @@ export default {
         display: 'flex',
         textAlign: 'center',
         justifyContent: 'center',
-        margin: '12px auto 12px auto',
+        margin: '12px auto 0 auto',
         // eslint-disable-next-line no-undef
         backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), ' + 'url(' + require(`../../assets/jpg/${this.otdel_data.pic}`) + ')',
         backgroundRepeat: 'no-repeat',

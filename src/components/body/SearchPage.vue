@@ -19,12 +19,10 @@
       </a>
     </div>
     <ToMenuButton/>
-    <CommonFooter/>
   </div>
 </template>
 
 <script>
-import CommonFooter from "@/components/footer/CommonFooter";
 import ToMenuButton from "@/components/body/ToMenuButton";
 import {mapGetters} from 'vuex'
 
@@ -36,7 +34,6 @@ export default {
     }
   },
   components: {
-    CommonFooter,
     ToMenuButton
   },
   computed: {
@@ -52,7 +49,8 @@ export default {
 
 .search-page-wrapper
   .search-page-header
-    margin: 20px auto 20px auto
+    padding-top: 20px
+    margin: 0 auto 20px auto
     font-family: Raleway, serif
     font-size: 28px
     font-weight: 600
