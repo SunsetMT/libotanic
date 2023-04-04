@@ -15,7 +15,7 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.6.5",
     "gsap": "^3.8.0",
-    "postcss": "^7.0.39",
+    "postcss": "^8.1.9",
     "postcss-loader": "^6.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "velocity-animate": "^1.5.2",
