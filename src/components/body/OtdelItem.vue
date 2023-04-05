@@ -7,7 +7,7 @@
 
     <transition name="fade">
       <div class="otrads" v-if="isActive">
-        <div class="otrad_item" v-for="plant in this.$store.state.plants.filter(p => p.otdel === otdel_data.name)"
+        <div class="otrad_item" v-for="plant in this.$store.state.plants.filter(p => p.garden_id === $route.params.garden_id).filter(p => p.otdel === otdel_data.name)"
              :key="plant.id">
           <a :href="'#/plant/' + plant.id" class="plant-rus-name">
             {{ plant.rus_name }}

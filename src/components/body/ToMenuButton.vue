@@ -1,7 +1,7 @@
 <template>
   <transition>
     <div class="to-menu-button-wrapper">
-      <button class="to-menu-button" @click="redirect('#/otdels')">
+      <button class="to-menu-button" @click="redirect('#/')">
         <img src="../../assets/jpg/back-arrow.svg" alt="" class="back-arrow">
         Вернуться в меню
       </button>

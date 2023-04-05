@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Otdels from "@/components/body/Otdels";
-import GardenItem from "@/components/body/GardenItem";
 import PlantPage from "@/components/body/PlantPage";
 import SearchPage from "@/components/body/SearchPage";
+import GardensList from "@/components/body/GardensList";
 
 Vue.use(Router);
 
@@ -14,10 +14,10 @@ let router = new Router({
         {
             path: '/',
             name: 'gardens',
-            component: GardenItem
+            component: GardensList
         },
         {
-            path: '/otdels',
+            path: '/otdels/:garden_id',
             name: 'otdels',
             component: Otdels
         },

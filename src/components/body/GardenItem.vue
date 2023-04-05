@@ -1,8 +1,8 @@
 <template>
   <div class="garden-item-wrapper-box" v-cloak>
-    <a href="#/otdels" class="garden-item-wrapper">
+    <a :href="`#/otdels/` + garden.id" class="garden-item-wrapper" :style="styleObject">
       <span class="garden-title">
-        Ботанический сад Петра Великого
+        {{ garden.name }}
       </span>
     </a>
 
@@ -24,6 +24,28 @@ export default {
           'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
           'x-rapidapi-key': '28378676e0mshb011eb4a5272f7ep1f8eddjsnc6cc2ac86ca8'
         }
+      },
+    }
+  },
+
+  props: {
+    garden: {name: String, id: Number, jpg: String}
+  },
+  computed: {
+    styleObject: function () {
+      return {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '0 auto 0 auto',
+        width: '309px',
+        height: '257px',
+        // eslint-disable-next-line no-undef
+        backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), ' + 'url(' + require(`../../assets/jpg/${this.garden.jpg}`) + ')',
+        backgroundSize: '309px 257px',
+        backgroundRepeat: 'no-repeat',
+        borderRadius: '10px',
+        filter: 'drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))',
+        textDecoration: 'none'
       }
     }
   },
@@ -51,18 +73,6 @@ export default {
   padding: 40px 0
 
   .garden-item-wrapper
-
-    display: flex
-    justify-content: center
-    margin: 0 auto 0 auto
-    width: 309px
-    height: 257px
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/jpg/PetrGarden.jpg")
-    background-size: 309px 257px
-    background-repeat: no-repeat
-    border-radius: 10px
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
-    text-decoration: none
 
     .garden-title
       align-self: center
