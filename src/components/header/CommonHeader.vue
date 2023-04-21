@@ -1,6 +1,6 @@
 <template>
   <div class="header-wrapper">
-    <a href="#/" class="header-title">БиблиоСад</a>
+    <a href="#/" class="header-title">BiblioGarden</a>
   </div>
 </template>
 

@@ -15,7 +15,7 @@
 
     <div class="plant-description">
       <div class="plant-description-header">
-        Историческая справка
+        Historical info
       </div>
       <div class="plant-description-text">
         {{ PLANTS.find(p => p.id === Number($route.params.id)).descr }}
@@ -25,7 +25,7 @@
 
     <div class="plant-classification">
       <div class="plant-classification-header">
-        Место в классификации
+        Classification
       </div>
       <div class="plant-classification-text">
         <div class="plant-classification-el">
@@ -49,7 +49,7 @@
 
 
     <div class="plant-extra-photos">
-      <div class="plant-extra-photos-text">Фотографии деталей</div>
+      <div class="plant-extra-photos-text">Photo details</div>
       <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict1" alt="" class="plant-page-plant-extra-pic1" v-cloak>
       <img :src="PLANTS.find(p => p.id === Number($route.params.id)).pict2" alt="" class="plant-page-plant-extra-pic2" v-cloak>
     </div>

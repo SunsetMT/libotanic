@@ -304,9 +304,9 @@ let store = new Vuex.Store({
             {name: 'Папоротниковидные', pic: 'Папоротниковидные.jpg'},
         ],
         gardens: [
-            {name: "Ботанический сад Петра Великого", id: 1, jpg: 'PetrGarden.jpg'},
-            {name: "Стрельна", id: 2, jpg: 'StrelnaGarden.jpg'},
-            {name: "Летний сад", id: 3, jpg: 'SummerGarden.jpg'},
+            {name: "Botanical Gardens of Peter the Great", id: 1, jpg: 'PetrGarden.jpg'},
+            {name: "Strelna", id: 2, jpg: 'StrelnaGarden.jpg'},
+            {name: "Summer Garden", id: 3, jpg: 'SummerGarden.jpg'},
         ]
     },
     mutations: {

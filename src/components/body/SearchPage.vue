@@ -2,10 +2,10 @@
   <div class="search-page-wrapper">
 
     <div class="search-page-header">
-      Поиск
+      Search
     </div>
     <input v-model="search" type="text" class="form-control"
-           placeholder="Поиск">
+           placeholder="Search">
 
     <div class="all-plants" v-for="plant in PLANTS"
          :key="plant.id">

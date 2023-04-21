@@ -7,7 +7,7 @@
 
     <span class="search-link-box">
       <div class="otdels-header-title">
-        Список
+        List
       </div>
       <span class="otdels-header-arrow"></span>
 
