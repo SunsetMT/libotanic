@@ -10,11 +10,11 @@
     <div class="all-plants" v-for="plant in PLANTS"
          :key="plant.id">
       <a :href="'#/plant/' + plant.id" class="plant-rus-name"
-         v-if="plant.lat_name.toLowerCase().includes(search.toLowerCase()) || plant.rus_name.toLowerCase().includes(search.toLowerCase())">
-        {{ plant.rus_name }}
+         v-if="plant.lat_name.toLowerCase().includes(search.toLowerCase()) || plant.eng_name.toLowerCase().includes(search.toLowerCase())">
+        {{ plant.eng_name }}
       </a>
       <a :href="'#/plant/' + plant.id" class="plant-lat-name"
-         v-if="plant.lat_name.toLowerCase().includes(search.toLowerCase()) || plant.rus_name.toLowerCase().includes(search.toLowerCase())">
+         v-if="plant.lat_name.toLowerCase().includes(search.toLowerCase()) || plant.eng_name.toLowerCase().includes(search.toLowerCase())">
         {{ plant.lat_name }}
       </a>
     </div>

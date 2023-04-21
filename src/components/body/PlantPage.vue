@@ -2,7 +2,7 @@
   <div class="plant-page-wrapper" v-cloak>
     <div class="plant-page-header">
       <div class="plant-page-header-rus-name">
-        {{ PLANTS.find(p => p.id === Number($route.params.id)).rus_name }}
+        {{ PLANTS.find(p => p.id === Number($route.params.id)).eng_name }}
       </div>
       <div class="plant-page-header-lat-name">
         {{ PLANTS.find(p => p.id === Number($route.params.id)).lat_name }}
@@ -18,7 +18,7 @@
         Historical info
       </div>
       <div class="plant-description-text">
-        {{ PLANTS.find(p => p.id === Number($route.params.id)).descr }}
+        {{ PLANTS.find(p => p.id === Number($route.params.id)).descr_eng }}
       </div>
     </div>
 
@@ -29,19 +29,19 @@
       </div>
       <div class="plant-classification-text">
         <div class="plant-classification-el">
-          {{ PLANTS.find(p => p.id === Number($route.params.id)).otdel }} |
+<!--          {{ PLANTS.find(p => p.id === Number($route.params.id)).otdel }} |-->
           {{ PLANTS.find(p => p.id === Number($route.params.id)).divisio }}
         </div>
         <div class="plant-classification-el">
-          {{ PLANTS.find(p => p.id === Number($route.params.id)).class }} |
+<!--          {{ PLANTS.find(p => p.id === Number($route.params.id)).class }} |-->
           {{ PLANTS.find(p => p.id === Number($route.params.id)).classis }}
         </div>
         <div class="plant-classification-el">
-          {{ PLANTS.find(p => p.id === Number($route.params.id)).otrad }} |
+<!--          {{ PLANTS.find(p => p.id === Number($route.params.id)).otrad }} |-->
           {{ PLANTS.find(p => p.id === Number($route.params.id)).ordo }}
         </div>
         <div class="plant-classification-el">
-          {{ PLANTS.find(p => p.id === Number($route.params.id)).semeistvo }} |
+<!--          {{ PLANTS.find(p => p.id === Number($route.params.id)).semeistvo }} |-->
           {{ PLANTS.find(p => p.id === Number($route.params.id)).familia }}
         </div>
       </div>

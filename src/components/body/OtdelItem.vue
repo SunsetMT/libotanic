@@ -1,7 +1,7 @@
 <template>
   <div class="otdel-item-main-wrapper">
     <a class="otdel-item-wrapper" :style="this.styleObject" @click="changeStatus">
-      <span class="otdel-title">{{ otdel_data.name }}</span>
+      <span class="otdel-title">{{ otdel_data.name_eng }}</span>
     </a>
 
 
@@ -10,7 +10,7 @@
         <div class="otrad_item" v-for="plant in this.$store.state.plants.filter(p => p.garden_id === $route.params.garden_id).filter(p => p.otdel === otdel_data.name)"
              :key="plant.id">
           <a :href="'#/plant/' + plant.id" class="plant-rus-name">
-            {{ plant.rus_name }}
+            {{ plant.eng_name }}
           </a>
           <a :href="'#/plant/' + plant.id" class="plant-lat-name">
             {{ plant.lat_name }}
@@ -39,7 +39,7 @@ export default {
   },
   props: {
     otdel_data: {
-      type: Object,
+      type: {name: String, name_eng: String, id: Number},
       default: () => {
       }
     }

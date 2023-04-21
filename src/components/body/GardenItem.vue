@@ -2,7 +2,7 @@
   <div class="garden-item-wrapper-box" v-cloak>
     <a :href="`#/otdels/` + garden.id" class="garden-item-wrapper" :style="styleObject">
       <span class="garden-title">
-        {{ garden.name }}
+        {{ garden.name_eng }}
       </span>
     </a>
 
@@ -29,7 +29,7 @@ export default {
   },
 
   props: {
-    garden: {name: String, id: Number, jpg: String}
+    garden: {name: String, name_eng: String, id: Number, jpg: String}
   },
   computed: {
     styleObject: function () {
